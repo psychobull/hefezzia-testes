@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Media Query -->
+    <link rel="stylesheet" href="tela-media-querie.css" media="screen">
+    <link rel="stylesheet" href="impressora-media-qurie.css" media="print">
+</head>
+<body>
+    <header>
+        <h1>Noticias</h1>
+        <menu>
+            <ul>
+                <li>esportes</li>
+                <li>tecnologia</li>
+                <li>politica</li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>lorotinha de pute</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum pariatur cumque laborum numquam, tenetur quam tempore consequuntur atque quis omnis, rerum fugit harum repudiandae sapiente blanditiis est odit. Recusandae, aperiam.</p>
+            
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius illo distinctio quae autem laborum libero nihil minus ipsa aliquam, ducimus veritatis culpa itaque. Illum rerum sequi numquam placeat dolor praesentium?</p>
+            
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo suscipit ipsam cumque nisi quas ipsum minus molestias qui quo animi magnam consequatur distinctio, excepturi corporis enim repellat perferendis nobis ducimus!</p>
+        </article>
+    </main>
+</body>
+</html>
+
+#################################################
+
+@charset "UTF-8";
+
+/* estilo para impressora */
+
+*{
+    margin: 10px;
+    padding: 10px;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+menu{
+    display: none;
+}
+
+article{
+    width: 100%;
+}
+
+article::after{
+    content: "Esse artigo foi impresso através do site www.com.br";
+}
+
+#################################################
+
+/* estilo para tela */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+header{
+    background-color: lightgray;
+}
+
+header > h1{
+    text-align: center;
+}
+
+menu > ul{
+    list-style-type: none;
+    background-color: gray;
+}
+
+menu li{
+    background-color: #333333;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+}
+
+article{
+    width: 600px;
+    display: block;
+    margin: auto;
+}
