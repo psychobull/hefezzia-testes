@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Media Features -->
+    <link rel="stylesheet" href="estilo-geral.css" media="all">
+    <link rel="stylesheet" href="retrato.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="paisagem.css" media="screen and (orientation: landscape)">
+</head>
+<body>
+    <h1>Mude a orientação do seu dispositivo</h1>
+</body>
+</html>
+
+########################################
+
+------CONFIG GERAL------
+
+@charset "UTF-8";
+
+/* config gerais */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1{
+    color: white;
+    text-shadow: 2px 2px 0px gray;
+    padding: 10px;
+}
+
+########################################
+
+------ESTILO RETRATO------
+
+@charset "UTF-8";
+
+/* aparelho em pé */
+
+body{
+    background-image: url(cev-portrait.jpg);
+    background-position: center bottom;
+}
+
+########################################
+
+------ESTILO PAISAGEM------
+
+@charset "UTF-8";
+
+/* aparelho deitado */
+
+body{
+    background-image: url(cev-landscape.jpg);
+    background-position: left bottom;
+}
