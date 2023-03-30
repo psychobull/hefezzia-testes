@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
-<body>
+<body onresize="mudouTamanho">
     <header>
         <h1>Meu Site</h1>
         <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
         <menu id="itens">
             <ul>
-                <li><a href="#">Opção 1</a></li>
+                <li id="opcao1"><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
                 <li><a href="#">Opção 3</a></li>
                 <li><a href="#">Opção 4</a></li>
@@ -33,8 +34,18 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus perspiciatis eaque optio eligendi numquam, culpa quam quae illo cumque illum animi sint ratione, qui accusantium adipisci deleniti commodi tenetur quos!</p>
         </article>
     </main>
-    
-    /* JAVA SCRIPT */
+
+    <script>
+        function mudouTamanho(){
+            if (window.innerWidth >= 768){
+                itens.style.display = 'block'
+            }
+            else{
+                itens.style.display = 'none'
+            }
+        }
+    </script>
+
     <script>
         function clickMenu(){
             if (itens.style.display == 'block'){
@@ -114,6 +125,7 @@ main{
     background-color: white;
     margin: auto;
     margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px;
     border-radius: 10px;
 }
@@ -126,4 +138,58 @@ main > article > p{
     text-align: justify;
     margin-bottom: 10px;
     text-indent: 20px;
+}
+
+###################################
+
+-------MEDIA QUERIES CSS-------
+
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    span#burguer{
+        display: none;
+    }
+
+    menu{
+        display: block;
+    }
+    
+    menu > ul > li{
+        display: inline-block;
+        margin-left: -3px;
+        width: 19.8vw;
+    }
+
+    menu > ul > li#opcao1{
+        margin-left: 0.5px;
+    }
+
+    main{
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    span#burguer{
+        display: none;
+    }
+
+    menu{
+        display: block;
+    }
+    
+    menu > ul > li{
+        display: inline-block;
+        margin-left: -3px;
+        width: 19.89vw;
+    }
+
+    menu > ul > li#opcao1{
+        margin-left: 0.5px;
+    }
+
+    main{
+        width: 768px;
+    }
 }
