@@ -22,6 +22,8 @@
 
 ####################################
 
+------STYLE (MOBILE)------
+
 @charset "UTF-8";
 
 *{
@@ -32,17 +34,19 @@
     box-sizing: border-box;
 }
 
-hmtl{
-    height: 100vh;
+hmtl,  body{
+    height: 97vh;
 }
 
 body{
     background: black url(back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 main{
     background-color: rgba(255, 255, 255, 0.829);
-    width: 90vw;
+    width: 400px;
     margin: auto;
     margin-top: 20px;
     border-radius: 10px;
@@ -57,8 +61,6 @@ h1{
 img{
     display: block;
     margin: auto;
-    background-size: cover;
-    background-position: center center;
 }
 
 img#iphone{ display: block; }
@@ -66,3 +68,85 @@ img#itv{ display: none; }
 img#idesk{ display: none; }
 img#itablet{ display: none; }
 img#iprint{ display: none; }
+
+####################################
+
+------MEDIA QUERY------
+
+@charset "UTF-8";
+
+/* todas as dms listas */
+
+/* typical devices breakpoints
+pequenas telas - até 600px
+cll - 600px até 768px
+tablet - 769px até 992px
+desk - 993px até 1200px
+grandes telas - acima de 1201px */
+
+@media print{
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+        background-image: url(back-print.jpg);
+        /* desnecessaário, impressora n imprime background */
+    }
+
+    main{
+        border: 2px solid black;
+    }
+
+    main > h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    main::after{
+        content: "Essa impressão foi feita através do site www.com.br";
+        text-decoration: overline;
+    }
+
+    img#iphone{ display: none; }
+    img#itv{ display: none; }
+    img#idesk{ display: none; }
+    img#itablet{ display: none; }
+    img#iprint{ display: block; }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    body{
+        background-image: url(back-tablet.jpg);
+    }
+
+    img#iphone{ display: none; }
+    img#itv{ display: none; }
+    img#idesk{ display: none; }
+    img#itablet{ display: block; }
+    img#iprint{ display: none; }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    body{
+        background-image: url(back-pc.jpg);
+    }
+
+    img#iphone{ display: none; }
+    img#itv{ display: none; }
+    img#idesk{ display: block; }
+    img#itablet{ display: none; }
+    img#iprint{ display: none; }
+}
+
+@media screen and (min-width: 1201px) {
+    body{
+        background-image: url(back-tv.jpg);
+    }
+
+    img#iphone{ display: none; }
+    img#itv{ display: block; }
+    img#idesk{ display: none; }
+    img#itablet{ display: none; }
+    img#iprint{ display: none; }
+}
