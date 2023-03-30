@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="media-query.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Testando Media Queries</h1>
+        <img id="iphone" src="icon-phone.png" alt="cll">
+        <img id="itablet" src="icon-tablet.png" alt="tablet">
+        <img id="iprint" src="icon-print.png" alt="impressão">
+        <img id="idesk" src="icon-pc.png" alt="desk">
+        <img id="itv" src="icon-tv.png" alt="tv">
+    </main>
+</body>
+</html>
+
+####################################
+
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+hmtl{
+    height: 100vh;
+}
+
+body{
+    background: black url(back-phone.jpg) no-repeat;
+}
+
+main{
+    background-color: rgba(255, 255, 255, 0.829);
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+}
+
+img{
+    display: block;
+    margin: auto;
+    background-size: cover;
+    background-position: center center;
+}
+
+img#iphone{ display: block; }
+img#itv{ display: none; }
+img#idesk{ display: none; }
+img#itablet{ display: none; }
+img#iprint{ display: none; }
