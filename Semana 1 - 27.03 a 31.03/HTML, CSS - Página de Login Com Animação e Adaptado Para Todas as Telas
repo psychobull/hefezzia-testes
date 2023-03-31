@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+
+            </div>
+
+            <div id="formulario">
+                <h1>Login</h1>
+                <p>
+                    Seja bem-vind@ novamente. Faça login para acessar sua conta 
+                    e poder fazer as configurações no seu ambiente!
+                </p>
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <span class="material-icons">mail</span>
+                        <input type="email" name="login" id="ilogin" placeholder="seu email" 
+                        autocomplete="email" required maxlength="30">
+                        <label for="ilogin">Login</label>
+                    </div>
+
+                    <div class="campo">
+                        <span class="material-icons">lock</span>
+                        <input type="password" name="senha" id="isenha" placeholder="sua senha" 
+                        autocomplete="current-password" required minlength="8" maxlength="14">
+                        <label for="isenha">Senha</label>
+                    </div>
+
+                    <input type="submit" value="Entrar">
+                    <a href="#" class="botao">Esqueci a senha</a>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+#############################
+
+---------STYLE CSS---------
+
+@charset "UTF-8";
+
+/*
+    paleta de cores:
+    verde: #49a09d
+    lilas: #5f2c82
+*/
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color: #5f2c82;
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+section#login{
+    background-color: white;
+    height: 500px;
+    width: 250px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #00000088;
+
+    /* animação de transição de largura e altura */
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+    /* smp coloque animações na parte de baixo do codigo */
+}
+
+section#login > div#imagem{
+    background: #5f2c82 url(edifícios-modernos-do-negócio.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    display: block;
+}
+
+section#login > div#formulario{
+    padding: 10px;
+    display: block;
+}
+
+div#formulario > h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p{
+    font-size: 0.8em;
+    margin-bottom: 13px;
+}
+
+form > div.campo{
+    background-color: #5f2c82;
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+    border: 2px solid #5f2c82;
+}
+
+div.campo > label{
+    display: none;
+}
+
+div.campo > span{
+    color: white;
+    font-size: 1.8em;
+    width: 40px;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+div.campo > input{
+    background-color: #51a09d;
+    font-size: 1em;
+    width: calc(100% - 49.4px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-9px);
+}
+
+div.campo > input:focus-within{
+    background-color: #9ee0de;
+}
+
+div.campo > input::placeholder{
+    color: #ffffff8e;
+}
+
+div.campo > input:focus-visible::placeholder{
+    color: #00000077;
+}
+
+form > input[type = submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #51a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+form > input[type = submit]:hover{
+    background-color: #61cac7;
+    color: #274b49;
+    cursor: pointer;
+}
+
+form > a.botao{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #c9e7e6;
+    border: 1px solid #49a09d;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #346e6c;
+    margin-top: 5px;
+    padding-top: 7px;
+}
+
+form > a.botao:hover{
+    background-color: #5bc7c3;
+    color: white;
+}
+
+#############################
+
+---------MEDIA QUERIES---------
+
+@charset "UTF-8";
+
+/*
+tablet - 769px até 992px
+desk - 993px até 1200px
+*/
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    body{
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+
+    section#login{
+        width: 80vw;
+        height: 285px;
+    }
+
+    section#login > div#imagem{
+        float: left;
+        width: 40%;
+        height: 100%;
+    }
+
+    section#login > div#formulario{
+        float: right;
+        width: 60%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body{
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+
+    section#login{
+        width: 950px;
+        height: 285px;
+    }
+
+    section#login > div#imagem{
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login > div#formulario{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+}
