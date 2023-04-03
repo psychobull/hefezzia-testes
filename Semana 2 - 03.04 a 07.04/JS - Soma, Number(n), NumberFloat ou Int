@@ -1,0 +1,26 @@
+Codigo HTML base
+
+Codigo CSS base
+
+#####################
+
+-------JS BASE-------
+
+var n1 = window.prompt('Digite um número')
+var n2 = window.prompt('Digite outro número')
+
+var soma = Number.parseFloat(n1) + Number.parseFloat(n2)
+
+/*
+o 'prompt' recebe todos os dados como uma string,
+o comando 'Number' transforma o valor indicado
+para o tipo de dado q for especificado, nesse caso, float
+*/
+
+/* 
+posso usar somente 'Number(n)', sem precisar especificar,
+mas caso haja uma situação onde seja necessário, posso utilizar
+o método citado acima
+*/
+
+window.alert('O resultado da soma entre ' + n1 + ' e ' + n2 + ' é: ' + soma)
