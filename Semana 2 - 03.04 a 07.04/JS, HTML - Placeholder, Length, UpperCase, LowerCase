@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style-base.css">
+    <script type="text/javascript" src="js-base.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+
+#########################
+
+--------CSS BASE--------
+
+#########################
+
+--------JS BASE--------
+
+var nomeUser = window.prompt('Digite seu nome abaixo:')
+
+window.alert(`Prazer em te conhecer, ${nomeUser}.`)
+
+/* 
+usar template string facilita na hora de
+referenciar uma variavel, como no caso acima.
+pra usar '${}', é necessário usar crase no lugar
+das aspas simples usadas anteriormente
+*/
+
+document.write(`Seu nome tem ${nomeUser.length} letras. <br>`)
+/*
+usando o '.length' após uma variavel string,
+é possivel saber quantos caracteres há na msm
+*/
+
+/*
+apesar de '<br>' ser parte de html, funciona tb no js
+e tem, como visto na execução do código, a msm função
+*/
+
+document.write(`Seu nome em letras MAIÚSCULAS é: ${nomeUser.toUpperCase()}. <br>`)
+/*
+usando o '.toUpperCase()' após uma variavel string,
+é possivel colocar toda ela em letras maiusculas
+*/
+
+document.write(`Seu nome em letras minúsculas é: ${nomeUser.toLowerCase()}.`)
+/*
+usando o '.toUpperCase()' após uma variavel string,
+é possivel colocar toda ela em letras minusculas
+*/
