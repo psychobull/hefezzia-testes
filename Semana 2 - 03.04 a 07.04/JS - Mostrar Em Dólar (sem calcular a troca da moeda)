@@ -1,0 +1,17 @@
+HTML base
+
+CSS base
+######################
+
+-------JS Base-------
+var n1 = Number(window.prompt('Digite o seu salário sem R$'))
+
+var salDol = n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
+
+window.alert(`Seu salário em dólar é: ${salDol}`)
+
+/*
+esse comando n calcula a transição das moedas,
+apenas mostra na tela o valor com a simbologia
+da moeda q foi selecionada (R$, U$, etc)
+*/
