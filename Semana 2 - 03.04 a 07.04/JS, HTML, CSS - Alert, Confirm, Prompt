@@ -13,7 +13,7 @@
             font-family: 'Courier New', Courier, monospace;
         }
     </style>
-    
+
 </head>
 <body>
     <header>
@@ -24,8 +24,13 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, veniam. Commodi accusantium deleniti placeat, enim quam nobis molestias eius cumque, et fuga perferendis blanditiis quaerat modi, animi cum odio ea.</p>
         <script>
             window.alert('Primeiro código em JS')
+            // cria um alerta na tela do usuario com uma unica opção de resposta: OK
+
             window.confirm('Está gostando do meu site?')
+            // cria um alerta na tela do usuario com 2 opções de resposta: OK ou Cancelar
+            
             window.prompt('Qual seu nome?')
+            // cria uma caixa de respsosta na tela do usuario
         </script>
     </main>
 </body>
