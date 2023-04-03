@@ -23,4 +23,9 @@ mas caso haja uma situação onde seja necessário, posso utilizar
 o método citado acima
 */
 
+/*
+para tranformar uma variavel numerica para string
+basta utilizar 'String(n) ou 'n.toString()'
+*/
+
 window.alert('O resultado da soma entre ' + n1 + ' e ' + n2 + ' é: ' + soma)
