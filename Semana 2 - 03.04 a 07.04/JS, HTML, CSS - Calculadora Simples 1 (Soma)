@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-base.css">
+    <script src="js-base.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Somando valores</h1>
+    </header>
+
+    <main>
+        <input type="number" name="n1" id="n1" placeholder="primeiro valor"> +
+        <input type="number" name="n2" id="n2" placeholder="segundo valor">
+        <input type="button" value="Somar" id="botao" onclick="somar()">
+        /*
+        por se tratar de um 'input' e n de um botão de fato (button),
+        é necessário colocar o 'onclick' para funcionar, logo, n pode
+        usar o 'addElementListener' nesse caso
+        */
+        
+        <p id="res">Resultado:</p>
+    </main>
+</body>
+</html>
+
+#########################
+
+--------CSS BASE--------
+@charset "UTF-8";
+
+body{
+    background-color: #19684e;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main > input#botao{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#########################
+
+--------JS BASE-------
+function somar(){
+    var tn1 = document.getElementById('n1')
+    var tn2 = document.getElementById('n2')
+    /*
+    transfiro o q foi digitado nas caixas de texto
+    para cada variavel separadamente
+    */
+
+    var valn1 = Number(tn1.value)
+    var valn2 = Number(tn2.value)
+    /*
+    transformo os valores string de cada variavel
+    em valores numericos para fazer a soma, usando
+    'value' para colher tal valor
+    */
+
+    var s = valn1 + valn2
+    var res = document.getElementById('res')
+    res.innerText = `Resultado: ${s}`
+}
