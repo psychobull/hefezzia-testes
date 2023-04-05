@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style-base.css">
+</head>
+<body>
+    <header>
+        <h1>Iniciando meus estudo com DOM</h1>
+    </header>
+
+    <main>
+        <p id="prg1">aqui vai o resultado</p>
+        <p>apredendo a usar <strong>DOM</strong> em JS</p>
+        <div>Clique em mim</div>
+    </main>
+
+    <script type="text/javascript" src="js-base.js"></script>
+</body>
+</html>
+
+#########################
+
+-------CSS BASE-------
+
+@charset "UTF-8";
+
+body{
+    background-color: #19684e;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#########################
+
+-------JS BASE-------
+
+var p1 = window.document.getElementById('prg1')
+
+p1.style.background = 'black'
