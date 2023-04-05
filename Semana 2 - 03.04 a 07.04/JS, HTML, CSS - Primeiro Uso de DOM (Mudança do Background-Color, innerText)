@@ -42,3 +42,4 @@ body{
 var p1 = window.document.getElementById('prg1')
 
 p1.style.background = 'black'
+p1.innerText = 'Comi macarrão ontem'
