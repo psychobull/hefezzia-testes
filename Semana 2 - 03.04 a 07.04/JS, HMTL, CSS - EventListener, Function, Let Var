@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-base.css">
+</head>
+<body>
+    <header>
+        <div id="area">
+            Interaja
+            <script src="js-base.js"></script>
+        </div>
+    </header>
+</body>
+</html>
+
+##########################
+
+---------CSS BASE---------
+
+@charset "UTF-8";
+
+body{
+    background-color: #19684e;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div#area{
+    background-color: white;
+    color: black;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+##########################
+
+---------JS BASE---------
+
+let interaja = document.getElementById('area')
+/*
+uso o 'let' para criar uma variavel, nesse caso 'interaja',
+dps disso, uso o 'document.getElementById('area')' para dar
+uma direção para essa variavel
+*/
+
+interaja.addEventListener('click', clicar)
+interaja.addEventListener('mouseenter', entrar)
+interaja.addEventListener('mouseout', sair)
+/*
+uso a variavel definida antes, q agr já tem um destino,
+para ouvir o evento q eu desejo através do comando
+'addEventListener', q recebe o evento q será escutado
+('click', 'mouseenter' e 'mouseout') e tb a função q
+será executada ('clicar', 'entrar' e 'sair')
+*/
+
+var p1 = document.querySelector('div#area')
+/*
+já que a variavel se repete por todo o processo,
+eu posso declarar ela aq fora para evitar
+linhas sem sentido no meu codigo
+*/
+
+function clicar(){
+    p1.innerHTML = '<strong>Clicou!</strong>'
+    /*
+    qro adicionar uma formatação, ent uso 'HTML'
+    ao invés de 'Text' após o 'inner'
+    */
+   
+    p1.style.background = 'yellow'
+}
+
+function entrar(){
+    p1.innerHTML = '<strong>Mouse Identificado!</strong>'
+}
+
+function sair(){
+    p1.innerHTML = '<strong>Mouse Saiu da Div!</strong>'
+    p1.style.background = 'white'
+}
