@@ -87,7 +87,7 @@ footer > p{
 -------JS BASE-------
 
 let carregou = document.getElementById('body')
-window.addEventListener('load', carregar)
+carregou = window.addEventListener('load', carregar)
 
 function carregar(){
     var msg = document.getElementById('msg')
