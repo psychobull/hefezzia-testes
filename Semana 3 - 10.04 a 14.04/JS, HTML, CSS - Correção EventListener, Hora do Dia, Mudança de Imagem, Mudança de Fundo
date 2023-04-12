@@ -1,0 +1,113 @@
+-------HTML BASE-------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style-base.css">
+    <script type="text/javascript" src="js-base.js"></script>
+</head>
+<body id="body">
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+
+    <main>
+        <section>
+            <div id="msg">
+                aq vai ta a hora
+            </div>
+            <br>
+            <div id="foto">
+                <img id="imagem" src="manha.jpg" alt="Manhã">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; MeuProjeto</p>
+    </footer>
+</body>
+</html>
+
+######################
+
+-------CSS BASE-------
+
+@charset "UTF-8";
+
+*{
+    font: normal 15pt arial;
+    color: white;
+}
+
+body{
+    background-color: #6262fc;
+    text-align: center;
+}
+
+header > h1{
+    font-size: 1.6em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #0000006e;
+}
+
+main{
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 350px;
+    margin: auto;
+    box-shadow: 5px 5px 10px #00000070;
+}
+
+main > section > #msg{
+    color: black;
+    text-shadow: 2px 2px 10px #808080f8;
+}
+
+main > section > #foto > #imagem{
+    align-items: center center;
+    border-radius: 100%;
+    width: 270px;
+    height: 100%;
+}
+
+footer > p{
+    text-align: center;
+    font-style: italic;
+}
+
+######################
+
+-------JS BASE-------
+
+let carregou = document.getElementById('body')
+window.addEventListener('load', carregar)
+
+function carregar(){
+    var msg = document.getElementById('msg')
+    var img = document.getElementById('imagem')
+
+    var data = new Date()
+    var hora = data.getHours()
+
+    msg.innerHTML = `Agora são ${hora}h!`
+
+    if (hora > 0 && hora <= 12){
+        img.src = 'manha.jpg'
+        document.body.style.backgroundColor = '#ffba3b'
+    }
+    else if (hora > 12 && hora <= 18){
+        img.src = 'tarde.jpg'
+        document.body.style.backgroundColor = '#ff7442'
+    }
+    else{
+        img.src = 'noite.jpg'
+        document.body.style.backgroundColor = '#171777'
+    }
+}
