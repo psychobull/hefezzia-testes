@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+*{
+    font: normal 15pt arial;
+    color: #000000;
+}
+
+body{
+    background-color: #6262fc;
+    text-align: center;
+}
+
+header > h1{
+    font-size: 1.6em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #0000006e;
+    color: #ffffff;
+}
+
+main{
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    width: 350px;
+    margin: auto;
+    box-shadow: 5px 5px 10px #00000070;
+}
+
+main > #div1 > #titulo{
+    margin-top: 3px;
+}
+
+main > #div1 > #titulo > #anoNasc{
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+main > #div2 > p{
+    color: gray;
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+}
+
+main > #div2 > #foto{
+    margin-top: 15px;
+    border-radius: 100%;
+    width: 300px;
+    height: auto;
+}
+
+footer > p{
+    text-align: center;
+    font-style: italic;
+    color: #ffffff;
+}
