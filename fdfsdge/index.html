@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="javascript.js"></script>
+</head>
+<body id="body">
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <main>
+        <div id="div1">
+            <p id="titulo">
+                Ano de Nascimento:
+                <input type="number" name="number" id="anoNasc" min="0">
+            </p>
+
+            <p id="sexo">
+                Sexo:
+                <input type="radio" name="radioSex" id="mas">
+                <label for="mas" id="M">Masculino</label>
+                <input type="radio" name="radioSex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+
+            <p id="botao">
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+
+        <div id="div2">
+            <p>Preencha todos os dados exigidos acima</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;MeuProjeto</p>
+    </footer>
+</body>
+</html>
