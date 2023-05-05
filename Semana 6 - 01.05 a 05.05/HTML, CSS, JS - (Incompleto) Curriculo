@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <title>João Silva - Resume</title>
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>JOÃO PEDRO O. F. SILVA</h1>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <hr>
+        <menu id="itens">
+            <ul id="lista">
+                <li><a href="#ed">Education</a></li>
+                <li><a href="#skl">Skills</a></li>
+                <li><a href="#xp">Experience</a></li>
+                <li><a href="#add">Additional Info.</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main id="main">
+        <p id="p1">My name is João Pedro Oliveira and I'm a second-year 
+            Computer Science student at UENF (State University of 
+            Norte Fluminense, Rio de Janeiro). I'm Brazilian and 
+            started studying programming at the age of 14. Although 
+            I entered university at 16, due to the pandemic, I was 
+            already 17 when classes started. My family needed financial 
+            assistance to survive, so I began receiving a grant of R$650 
+            (approximately U$130). Starting my studies at such an early 
+            age has given me excellent technical training and knowledge 
+            that I value greatly.
+        </p>
+        <p>Teaching has been a significant aspect of my life since I 
+            was 14 years old, and I'm confident that it will continue 
+            to be so. Through higher education, I will be able to gain 
+            experience and knowledge abroad that I can use to help my 
+            country in its development.
+        </p>
+        <p>At UENF, I faced the challenge of assembling a team of 
+            students and creating a simple website. Despite none of 
+            us having prior experience, we were able to complete the 
+            project in just four days.
+        </p>
+        <p>I am a hard-working individual who is passionate about 
+            developing projects in the field of technology. My 
+            ultimate goal is to use the knowledge I acquire to 
+            contribute to my country's economic growth and progress 
+            in technological advancements. My dedication is driven 
+            by my desire to be a part of my country's future.
+        </p>
+
+        <section>
+            <h2 id="ed">Education</h2>
+            <p></p>
+
+            <h2 id="skl">Skills</h2>
+            <p></p>
+
+            <h2 id="xp">Experience</h2>
+            <p></p>
+
+            <h2 id="add">Additional</h2>
+            <p></p>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
+
+###################
+
+-----CSS STYLE-----
+
+@charset "UTF-*";
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    background-color: #4A3B63;
+}
+
+header > h1{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+header > span#burguer{
+    background-color: #3A1E66;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 100px;
+    margin-left: -40px;
+    margin-top: -10px;
+    padding-left: 30px;
+}
+
+header > span#burguer:hover{
+    background-color: #532b94;
+    color: white;
+}
+
+header > menu{
+    display: none;
+}
+
+header > menu > ul{
+    list-style-type: none;
+    margin-left: -90px;
+    margin-top: -5px;
+    width: 200px;
+}
+
+header > menu > ul > li > a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #3A1E66;
+    color: white;
+    border-top: 2px solid #2b0e5a;
+}
+
+header > menu > ul > li > a:hover{
+    background-color: #5b2ea1;
+}
+
+hr{
+    width: 96vw;
+    margin-left: -8px;
+}
+
+main{
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 5px 10px #0000005d;
+    background-color: #3a1e66;
+}
+
+main > p{
+    width: 350px;
+    text-align: center;
+    margin-top: -8px;
+    padding-top: 5px;
+    background-color: #3a1e66;
+    padding-left: 25px;
+}
+
+#p1{
+    padding-top: 20px;
+}
+
+###################
+
+-----JS BASE-----
+
+function mudouTamanho(){
+    if (window.innerWidth >= 768){
+        itens.style.display = 'block'
+    }
+    else{
+        itens.style.display = 'none'
+    }
+}
+
+function clickMenu(){
+    if (itens.style.display == 'block'){
+        itens.style.display = 'none'
+    }
+    else{
+        itens.style.display = 'block'
+    }
+}
